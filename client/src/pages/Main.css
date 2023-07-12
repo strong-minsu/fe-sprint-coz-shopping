@@ -2,3 +2,11 @@ Header {
   position: fixed;
   top: 0;
 }
+main {
+  /* footer 확인을 위한 사이즈 */
+  height: 95vh;
+}
+Footer {
+  position: relative;
+  bottom: 0;
+}

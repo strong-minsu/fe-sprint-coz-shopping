@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import "./Main.css";
 
@@ -7,7 +8,7 @@ function Main() {
     <div>
       <Header />
       <main></main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
