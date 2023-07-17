@@ -6,22 +6,22 @@ import logo from "../img/logo.png";
 
 import Menu from "./Menu";
 
-function Header() {
-  const [menuCilck, setMenuClick] = useState(false);
-  function handleMenuClick() {
-    setMenuClick(!menuCilck);
+function Header(props) {
+  function handleMenuClick(e) {
+    e.preventDefault();
+    props.handleMenuClick();
   }
   return (
     <header>
       <Link to="/">
-        <img src={logo} />
+        <img className="logo-img" src={logo} />
       </Link>
       <span className="title">COZ Shopping</span>
       <div className="burger">
         <div className="menuIcon" onClick={handleMenuClick}>
           <i className="fa-solid fa-bars fa-2xl"></i>
         </div>
-        {menuCilck ? <Menu /> : null}
+        {props.isMenuCilck ? <Menu /> : null}
       </div>
     </header>
   );

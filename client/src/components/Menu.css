@@ -36,7 +36,7 @@
   z-index: 1;
 }
 
-li {
+.menuList li {
   margin: 0;
   width: 190px;
 

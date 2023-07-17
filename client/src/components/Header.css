@@ -6,6 +6,10 @@ header {
 
   background: #ffffff;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 /* 쇼핑몰 이름 */
@@ -19,7 +23,7 @@ header {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 88.02%;
   /* or 28px */
   display: flex;
@@ -55,7 +59,7 @@ header {
   position: absolute;
   z-index: 1;
 
-  left: -75%;
+  left: -85%;
   top: 80%;
 
   width: 200px;
@@ -63,7 +67,7 @@ header {
 }
 
 /* 로고 */
-img {
+.logo-img {
   position: absolute;
   width: 55px;
   height: 30px;
