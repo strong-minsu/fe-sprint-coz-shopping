@@ -20,6 +20,8 @@ function List(props) {
               count++;
               return (
                 <Card
+                  showModal={props.showModal}
+                  setModalSrc={props.setModalSrc}
                   key={item.id}
                   item={item}
                   bookmarkId={props.bookmarkId}
@@ -44,6 +46,8 @@ function List(props) {
               count++;
               return (
                 <Card
+                  showModal={props.showModal}
+                  setModalSrc={props.setModalSrc}
                   key={item.id}
                   item={item}
                   bookmarkId={props.bookmarkId}

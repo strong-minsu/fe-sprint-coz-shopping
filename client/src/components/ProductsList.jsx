@@ -6,6 +6,8 @@ export const ProductsList = (props) => {
     <div className="main-products-container">
       <h3>상품 리스트</h3>
       <List
+        showModal={props.showModal}
+        setModalSrc={props.setModalSrc}
         size={4}
         bookmark={false}
         bookmarkId={props.bookmarkId}
@@ -13,6 +15,8 @@ export const ProductsList = (props) => {
       />
       <h3>북마크 리스트</h3>
       <List
+        showModal={props.showModal}
+        setModalSrc={props.setModalSrc}
         size={4}
         bookmark={true}
         bookmarkId={props.bookmarkId}

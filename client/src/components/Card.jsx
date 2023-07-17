@@ -9,6 +9,12 @@ function Card(props) {
       props.bookmarkId.filter((item) => item !== props.item.id)
     );
   }
+
+  function showModalImage(e) {
+    //이미지 url
+    props.setModalSrc(e.target.src);
+    props.showModal();
+  }
   //타입별 카드 내용
   if (props.item.type === "Product") {
     return (
@@ -26,7 +32,11 @@ function Card(props) {
             ></i>
           )}
           <div>
-            <img className="product-img" src={props.item.image_url}></img>
+            <img
+              className="product-img"
+              src={props.item.image_url}
+              onClick={showModalImage}
+            ></img>
           </div>
         </div>
 
@@ -57,7 +67,11 @@ function Card(props) {
             ></i>
           )}
           <div>
-            <img className="product-img" src={props.item.image_url} />
+            <img
+              className="product-img"
+              src={props.item.image_url}
+              onClick={showModalImage}
+            />
           </div>
         </div>
         <div className="product-title">#{props.item.title}</div>
@@ -79,7 +93,11 @@ function Card(props) {
             ></i>
           )}
           <div>
-            <img className="product-img" src={props.item.image_url} />
+            <img
+              className="product-img"
+              src={props.item.image_url}
+              onClick={showModalImage}
+            />
           </div>
         </div>
         <div className="product-title">{props.item.title}</div>
@@ -102,7 +120,11 @@ function Card(props) {
             ></i>
           )}
           <div>
-            <img className="product-img" src={props.item.brand_image_url} />
+            <img
+              className="product-img"
+              src={props.item.brand_image_url}
+              onClick={showModalImage}
+            />
           </div>
         </div>
         <div className="product-title">{props.item.brand_name}</div>
