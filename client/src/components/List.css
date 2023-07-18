@@ -1,0 +1,16 @@
+.products-list-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.products-list {
+  /* position: absolute; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  list-style-type: none;
+  padding-left: 0;
+  height: auto;
+}
