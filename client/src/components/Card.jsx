@@ -1,13 +1,18 @@
 import "./Card.css";
 
+//toast 기능 모듈
+import { toast, ToastContainer } from "react-toastify";
+
 function Card(props) {
   function bookmarkAddHandler() {
     props.setBookmarkId([...props.bookmarkId, props.item.id]);
+    props.notify(props.item.id);
   }
   function bookmarkCancleHandler() {
     props.setBookmarkId(
       props.bookmarkId.filter((item) => item !== props.item.id)
     );
+    props.notify(props.item.id);
   }
 
   function showModalImage(e) {
@@ -41,9 +46,9 @@ function Card(props) {
         </div>
 
         <div className="product-title">{props.item.title}</div>
-        {props.item.discountPrecentage ? (
+        {props.item.discountPercentage ? (
           <span className="discount-precentage">
-            {props.item.discountPrecentage}%
+            {props.item.discountPercentage}%
           </span>
         ) : null}
         <div className="product-price">
@@ -127,8 +132,14 @@ function Card(props) {
             />
           </div>
         </div>
-        <div className="product-title">{props.item.brand_name}</div>
-        <div className="brand-fllower">{props.item.fllower}</div>
+        <div className="product-title">
+          {props.item.brand_name}
+          <span className="follower">관심 고객 수</span>
+        </div>
+
+        <div className="brand-follower">
+          {Number(props.item.follower).toLocaleString()}
+        </div>
       </div>
     );
   }
